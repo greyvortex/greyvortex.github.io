@@ -3,320 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greyvortex | Portfolio</title>
-    <meta name="description" content="Portfolio of Greyvortex - Student, CS Hobbyist, CyberSecurity Enthusiast">
+    <title>Greyvortex | Digital Garden</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo">GREYVORTEX</div>
-        <button class="mobile-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="theme-toggle" aria-label="Toggle theme">
-            <span class="theme-icon">🌙</span>
-        </button>
+    <div class="status-bar">
+        <div class="status-left">System: <span class="pulse">●</span> Online</div>
+        <div class="status-right" id="clock">00:00:00</div>
+    </div>
+
+    <nav>
+        <div class="logo">Greyvortex</div>
+        <div class="nav-links">
+            <button id="terminal-toggle" class="nav-btn">Terminal</button>
+            <a href="https://github.com/yourusername" target="_blank" class="nav-btn">GitHub</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header>
+    <div id="terminal" class="terminal-overlay hidden">
+        <div class="terminal-content">
+            <div class="terminal-header">
+                <span>greyvortex@kali: ~</span>
+                <button id="close-terminal">×</button>
+            </div>
+            <div class="terminal-body" id="terminal-out">
+                <p>> Initializing connection...</p>
+                <p>> Accessing grey_hat_vortex.db...</p>
+                <p>> Welcome, guest. Type 'help' for commands.</p>
+            </div>
+            <input type="text" id="terminal-input" placeholder="_" autofocus>
+        </div>
+    </div>
+
+    <header class="reveal">
         <div class="hero">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                </div>
-                <div class="terminal-body">
-                    <p class="terminal-line"><span class="prompt">$</span> <span class="typing-text"></span><span class="cursor">|</span></p>
-                </div>
-            </div>
-            <h1>Hi, I'm <span class="highlight">Greyvortex</span></h1>
-            <p class="subtitle">Student | CS Hobbyist | CyberSecurity Enthusiast | Engineering Explorer</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Lab</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <div class="mouse"></div>
+            <h1>Grey<span class="lavender-text">vortex</span></h1>
+            <p class="subtitle">CS Student & CyberSec Hobbyist</p>
+            <div class="tag-cloud">
+                <span>#C++</span> <span>#Python</span> <span>#Kali</span> <span>#React</span> <span>#Rust</span>
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2>System Info</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I am a student driven by curiosity about how the world is built and how to secure it. Whether it's writing clean code, understanding network vulnerabilities, or dismantling hardware, I'm always in the middle of a new project.</p>
-                <p class="mt-1">My journey in technology is fueled by hands-on experimentation, CTF competitions, and a passion for understanding systems at their core.</p>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="50">0</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="1000">0</div>
-                        <div class="stat-label">Hours Coding</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="25">0</div>
-                        <div class="stat-label">CTF Challenges</div>
-                    </div>
-                </div>
+    <main>
+        <section class="container reveal">
+            <div class="glass-card bio">
+                <h2>About the Node</h2>
+                <p>Building tools, breaking code, and exploring the intersection of engineering and security. I specialize in <strong>Web Pentesting</strong> and <strong>Reverse Engineering</strong>, usually from the comfort of a Linux environment.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="container">
-        <h2>Core Interests</h2>
-        <div class="grid">
-            <div class="card hoverable">
-                <div class="card-icon">💻</div>
-                <h3>Computer Science</h3>
-                <p>Logic, algorithms, and the art of building software from scratch.</p>
-                <ul class="feature-list">
-                    <li>Data Structures & Algorithms</li>
-                    <li>Object-Oriented Programming</li>
-                    <li>Systems Architecture</li>
-                </ul>
+        <section class="container reveal">
+            <h2 class="section-title">Project Repositories</h2>
+            <div class="project-grid">
+                <a href="https://github.com" class="project-card">
+                    <div class="card-header">
+                        <span class="folder-icon">📂</span>
+                        <span class="tag">C++ / Tooling</span>
+                    </div>
+                    <h3>NetVortex</h3>
+                    <p>A custom network analysis tool built for specific packet inspection tasks.</p>
+                </a>
+                
+                <a href="https://github.com" class="project-card">
+                    <div class="card-header">
+                        <span class="folder-icon">📂</span>
+                        <span class="tag">React / JS</span>
+                    </div>
+                    <h3>GreyDash</h3>
+                    <p>A cozy personal dashboard for monitoring local server uptime and logs.</p>
+                </a>
             </div>
-            <div class="card hoverable">
-                <div class="card-icon">🔒</div>
-                <h3>CyberSecurity</h3>
-                <p>Focusing on ethical hacking, CTFs, and defensive architecture.</p>
-                <ul class="feature-list">
-                    <li>Penetration Testing</li>
-                    <li>Network Security</li>
-                    <li>Cryptography</li>
-                </ul>
-            </div>
-            <div class="card hoverable">
-                <div class="card-icon">⚙️</div>
-                <h3>Engineering</h3>
-                <p>Exploring the intersection of hardware, physics, and digital systems.</p>
-                <ul class="feature-list">
-                    <li>Embedded Systems</li>
-                    <li>IoT Development</li>
-                    <li>Hardware Hacking</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2>Featured Projects</h2>
-        <div class="projects-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="security">Security</button>
-            <button class="filter-btn" data-filter="web">Web Dev</button>
-            <button class="filter-btn" data-filter="hardware">Hardware</button>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card" data-category="security">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Network Scanner Tool</h3>
-                    <p>Python-based network scanning utility for vulnerability assessment</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Scapy</span>
-                        <span class="tag">Security</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Portfolio Website</h3>
-                    <p>Responsive portfolio with dark mode and smooth animations</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="hardware">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Arduino IoT System</h3>
-                    <p>Home automation system with sensor integration</p>
-                    <div class="project-tags">
-                        <span class="tag">Arduino</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">IoT</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="security">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Password Manager</h3>
-                    <p>Encrypted password storage with master key authentication</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Cryptography</span>
-                        <span class="tag">SQLite</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2>Technical Arsenal</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skill-bars">
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Python</span>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>JavaScript</span>
-                            <span class="skill-percentage">75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>C/C++</span>
-                            <span class="skill-percentage">70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Bash/Shell</span>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="80"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Tools & Technologies</h3>
-                <div class="tech-grid">
-                    <div class="tech-item">Git</div>
-                    <div class="tech-item">Linux</div>
-                    <div class="tech-item">Docker</div>
-                    <div class="tech-item">Wireshark</div>
-                    <div class="tech-item">Metasploit</div>
-                    <div class="tech-item">Burp Suite</div>
-                    <div class="tech-item">Node.js</div>
-                    <div class="tech-item">React</div>
-                    <div class="tech-item">MySQL</div>
-                    <div class="tech-item">MongoDB</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p class="contact-description">Interested in collaborating or have a question? Feel free to reach out!</p>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:contact@greyvortex.dev">contact@greyvortex.dev</a>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <div class="contact-icon">🐙</div>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/greyvortex" target="_blank">@greyvortex</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-                <div class="form-status"></div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Greyvortex. Stay Curious.</p>
-            <div class="footer-links">
-                <a href="https://github.com/greyvortex" target="_blank">GitHub</a>
-                <a href="#">Blog</a>
-                <a href="#">RSS</a>
-            </div>
-        </div>
+        <p>Curiosity is the best exploit. &copy; 2026</p>
     </footer>
 
     <script src="script.js"></script>
