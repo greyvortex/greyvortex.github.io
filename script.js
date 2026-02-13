@@ -43,11 +43,13 @@ termInput.addEventListener('keypress', (e) => {
         } else if (cmd === 'about') {
             response.textContent = "Greyvortex: CS student & Security hobbyist.";
         } else if (cmd === 'skills') {
-            response.textContent = "C++, Python, React, Kali, Reverse Engineering.";
+            response.textContent = "Cybersecurity, programming, Reverse Engineering.";
         } else if (cmd === 'clear') {
             termOut.innerHTML = '';
             response.textContent = "Terminal cleared.";
-        } else {
+        }else if(cmd === 'exit') {
+            termOverlay.classList.add('hidden');
+        }else {
             response.textContent = "Command not found. Try 'help'.";
         }
         
