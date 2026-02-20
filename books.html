@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greyvortex | Books</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../public/Phantomlogo.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .shelf {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .book-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .book-card h3 {
+            margin-top: 0;
+            color: aliceblue;
+        }
+        .book-card p {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+        <div class="status-bar">
+        <div class="status-left">System: <span class="pulse">●</span> Online</div>
+        <div class="status-right" id="clock">00:00:00</div>
+    </div>
+
+    <div class="shelf">
+        <a href="books/The Art of Programming .pdf" target="_blank">
+            <div class="book-card">
+                <h3>The Art of Programming</h3>
+                <p>My first work on programming fundamentals and algorithmic thinking.</p>
+            </div>
+        </a>
+        <a href="books/AI-Powered Automation- How to Use AI to Save Time and Money.pdf" target="_blank">
+            <div class="book-card">
+                <h3>AI-Powered Automation</h3>
+                <p>Learn how to use AI to automate tasks and save time and money.</p>
+            </div>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
