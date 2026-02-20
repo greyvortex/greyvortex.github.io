@@ -103,3 +103,11 @@ h1 { font-family: 'JetBrains Mono'; font-size: 3rem; }
 /* Fade-in Animation */
 .reveal { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
 .reveal.show { opacity: 1; transform: translateY(0); }
+
+@media screen and (max-width: 600px) {
+    nav { flex-direction: column; gap: 15px; }
+    .nav-btn { margin-left: 0; }
+    header { height: auto; padding: 4rem 20px; }
+    h1 { font-size: 2.5rem; }
+    
+}
